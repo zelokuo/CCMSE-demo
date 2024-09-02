@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>VPIDM Listning Samples</title>
+
+  <link rel="stylesheet" href="css/audio.css">
+
+</head>
+
+<body>
+
+  <h1>A Robust Interpolation Scheme in Diffusion Models for Single-Channel Speech Enhancement <small class="color_fade">Audio Samples</small> </h1>
+<h4> Authors</h4>
+<div style="font-size: medium;"> Zilu Guo, Qing Wang, Jun Du, Shutong Niu, Ruoyu Wang, Gaobin Yang, Jia Pan, Qing-Feng Liu and Chin-Hui Lee </div>
+  <h4> Abstract </h4>
+  <p>In this article, we introduce a variance-preserving interpolation approach to diffusion models for single-channel speech enhancement (SE), termed the variance-preserving interpolation diffusion model (VPIDM). Specifically, VPIDM operates with only 25 iterative steps and obviates the need for the corrector, an essential element in the existing variance-exploding interpolation diffusion model (VEIDM). Two notable distinctions between VPIDM and VEIDM are the scaling function of the mean of a state variable and the constraint imposed on the variance amplitude relative to the mean's scale. We conduct a systematic exploration of the theoretical framework underlying VPIDM, further delve into comprehensive insights regarding VPIDM's application in SE, and introduce an early-stopping algorithm specifically designed for automatic speech recognition (ASR). Our empirical research, evaluated on two distinct datasets, demonstrates VPIDM's superior fidelity over traditional discriminative SE approaches. Furthermore, we assess the performance of the proposed model under varying signal-to-noise ratio (SNR) conditions. The investigation reveals VPIDM's improved robustness in target noise elimination compared to VEIDM. Significantly, implementing the early-stopping algorithm on both VPIDM and VEIDM results in enhanced ASR accuracy, thereby highlighting the practical efficacy of our methodology.</p>
+ <h3> Source Code </h3>
+	 <h4> Our codes are presented <font size="5"><a href="https://github.com/zelokuo/VPIDM">here</a></font> </h4>
+ <h4> Audio Samples </h4>
+  <hr>
+      <h3>DNS Simulated dataset -5 dB</h3> 
+
+
+<table class="table ">
+            <thead>
+                <tr>
+                    <th>Models</th>
+                    <th>clnsp51</th>
+                    <th>clnsp67</th>
+                    <th>clnsp94</th>
+                    <th>clnsp176</th>
+                    <th>clnsp513</th>                    
+                </tr>
+            </thead>
+            <tbody>
+                <tr> <td> Clean </td>
+	 <td><audio controls=""><source src="audio/Clean/-5/clnsp51_baby_416672_0_snr11_tl-22_fileid_167.wav"></audio></td>
+                <td><audio controls=""><source src="audio/Clean/-5/clnsp67_air_conditioner_151977_0_snr18_tl-23_fileid_80.wav"></audio></td>
+                <td><audio controls=""><source src="audio/Clean/-5/clnsp94_9wJqCdp5PKw_snr8_tl-18_fileid_43.wav"></audio></td>
+                <td><audio controls=""><source src="audio/Clean/-5/clnsp176_chair_154380_0_snr19_tl-32_fileid_35.wav"></audio></td>
+	 <td><audio controls=""><source src="audio/Clean/-5/clnsp624_XrrtrRz1A2Q_snr19_tl-22_fileid_54.wav"></audio></td>
+                </tr>
+                <tr> <td> Noisy </td>
+   	 <td><audio controls=""><source src="audio/Noisy/-5/clnsp51_baby_416672_0_snr11_tl-22_fileid_167.wav"></audio></td>
+                <td><audio controls=""><source src="audio/Noisy/-5/clnsp67_air_conditioner_151977_0_snr18_tl-23_fileid_80.wav"></audio></td>
+                <td><audio controls=""><source src="audio/Noisy/-5/clnsp94_9wJqCdp5PKw_snr8_tl-18_fileid_43.wav"></audio></td>
+                <td><audio controls=""><source src="audio/Noisy/-5/clnsp176_chair_154380_0_snr19_tl-32_fileid_35.wav"></audio></td>
+                <td><audio controls=""><source src="audio/Noisy/-5/clnsp513_babble_188218_9_snr15_tl-21_fileid_287.wav"></audio></td>
+                </tr>
+                <tr> <td> FSubNet </td>
+              	 <td><audio controls=""><source src="audio/FSubNet/-5/clnsp51_baby_416672_0_snr11_tl-22_fileid_167.wav"></audio></td>
+                <td><audio controls=""><source src="audio/FSubNet/-5/clnsp67_air_conditioner_151977_0_snr18_tl-23_fileid_80.wav"></audio></td>
+                <td><audio controls=""><source src="audio/FSubNet/-5/clnsp94_9wJqCdp5PKw_snr8_tl-18_fileid_43.wav"></audio></td>
+                <td><audio controls=""><source src="audio/FSubNet/-5/clnsp176_chair_154380_0_snr19_tl-32_fileid_35.wav"></audio></td>
+                <td><audio controls=""><source src="audio/FSubNet/-5/clnsp513_babble_188218_9_snr15_tl-21_fileid_287.wav"></audio></td>
+                </tr>
+                <tr> <td>NSNet2</td>
+               <td><audio controls=""><source src="audio/NSNet2/-5/clnsp51_baby_416672_0_snr11_tl-22_fileid_167.wav"></audio></td>
+                <td><audio controls=""><source src="audio/NSNet2/-5/clnsp67_air_conditioner_151977_0_snr18_tl-23_fileid_80.wav"></audio></td>
+                <td><audio controls=""><source src="audio/NSNet2/-5/clnsp94_9wJqCdp5PKw_snr8_tl-18_fileid_43.wav"></audio></td>
+                <td><audio controls=""><source src="audio/NSNet2/-5/clnsp176_chair_154380_0_snr19_tl-32_fileid_35.wav"></audio></td>
+                <td><audio controls=""><source src="audio/NSNet2/-5/clnsp513_babble_188218_9_snr15_tl-21_fileid_287.wav"></audio></td>
+                </tr>
+                <tr> <td> NCSN++</td>
+                 <td><audio controls=""><source src="audio/NCSN++/-5/clnsp51_baby_416672_0_snr11_tl-22_fileid_167.wav"></audio></td>
+                <td><audio controls=""><source src="audio/NCSN++/-5/clnsp67_air_conditioner_151977_0_snr18_tl-23_fileid_80.wav"></audio></td>
+                <td><audio controls=""><source src="audio/NCSN++/-5/clnsp94_9wJqCdp5PKw_snr8_tl-18_fileid_43.wav"></audio></td>
+                <td><audio controls=""><source src="audio/NCSN++/-5/clnsp176_chair_154380_0_snr19_tl-32_fileid_35.wav"></audio></td>
+                <td><audio controls=""><source src="audio/NCSN++/-5/clnsp513_babble_188218_9_snr15_tl-21_fileid_287.wav"></audio></td>
+                </tr>
+                <tr> <td> VEIDM </td>
+        	 <td><audio controls=""><source src="audio/VEIDM/-5/clnsp51_baby_416672_0_snr11_tl-22_fileid_167.wav"></audio></td>
+                <td><audio controls=""><source src="audio/VEIDM/-5/clnsp67_air_conditioner_151977_0_snr18_tl-23_fileid_80.wav"></audio></td>
+                <td><audio controls=""><source src="audio/VEIDM/-5/clnsp94_9wJqCdp5PKw_snr8_tl-18_fileid_43.wav"></audio></td>
+                <td><audio controls=""><source src="audio/VEIDM/-5/clnsp176_chair_154380_0_snr19_tl-32_fileid_35.wav"></audio></td>
+                <td><audio controls=""><source src="audio/VEIDM/-5/clnsp513_babble_188218_9_snr15_tl-21_fileid_287.wav"></audio></td>
+                </tr>
+                <tr> <td> VPIDM </td>
+ 	 <td><audio controls=""><source src="audio/VPIDM/-5/clnsp51_baby_416672_0_snr11_tl-22_fileid_167.wav"></audio></td>
+                <td><audio controls=""><source src="audio/VPIDM/-5/clnsp67_air_conditioner_151977_0_snr18_tl-23_fileid_80.wav"></audio></td>
+                <td><audio controls=""><source src="audio/VPIDM/-5/clnsp94_9wJqCdp5PKw_snr8_tl-18_fileid_43.wav"></audio></td>
+                <td><audio controls=""><source src="audio/VPIDM/-5/clnsp176_chair_154380_0_snr19_tl-32_fileid_35.wav"></audio></td>
+                <td><audio controls=""><source src="audio/VPIDM/-5/clnsp513_babble_188218_9_snr15_tl-21_fileid_287.wav"></audio></td>
+                </tr>        
+            </tbody>
+        </table>
+
+<hr>
+      <h3>DNS Simulated dataset 0 dB</h3> 
+
+
+<table class="table ">
+            <thead>
+                <tr>
+                       <th>Models</th>
+                    <th>clnsp51</th>
+                    <th>clnsp67</th>
+                    <th>clnsp94</th>
+                    <th>clnsp176</th>
+                    <th>clnsp513</th>                  
+                </tr>
+            </thead>
+            <tbody>
+                <tr> <td> Clean </td>
+	 <td><audio controls=""><source src="audio/Clean/0/clnsp51_baby_416672_0_snr11_tl-22_fileid_167.wav"></audio></td>
+                <td><audio controls=""><source src="audio/Clean/0/clnsp67_air_conditioner_151977_0_snr18_tl-23_fileid_80.wav"></audio></td>
+                <td><audio controls=""><source src="audio/Clean/0/clnsp94_9wJqCdp5PKw_snr8_tl-18_fileid_43.wav"></audio></td>
+                <td><audio controls=""><source src="audio/Clean/0/clnsp176_chair_154380_0_snr19_tl-32_fileid_35.wav"></audio></td>
+	 <td><audio controls=""><source src="audio/Clean/0/clnsp624_XrrtrRz1A2Q_snr19_tl-22_fileid_54.wav"></audio></td>
+                </tr>
+                <tr> <td> Noisy </td>
+   	 <td><audio controls=""><source src="audio/Noisy/0/clnsp51_baby_416672_0_snr11_tl-22_fileid_167.wav"></audio></td>
+                <td><audio controls=""><source src="audio/Noisy/0/clnsp67_air_conditioner_151977_0_snr18_tl-23_fileid_80.wav"></audio></td>
+                <td><audio controls=""><source src="audio/Noisy/0/clnsp94_9wJqCdp5PKw_snr8_tl-18_fileid_43.wav"></audio></td>
+                <td><audio controls=""><source src="audio/Noisy/0/clnsp176_chair_154380_0_snr19_tl-32_fileid_35.wav"></audio></td>
+                <td><audio controls=""><source src="audio/Noisy/0/clnsp513_babble_188218_9_snr15_tl-21_fileid_287.wav"></audio></td>
+                </tr>
+                <tr> <td> FSubNet </td>
+              	 <td><audio controls=""><source src="audio/FSubNet/0/clnsp51_baby_416672_0_snr11_tl-22_fileid_167.wav"></audio></td>
+                <td><audio controls=""><source src="audio/FSubNet/0/clnsp67_air_conditioner_151977_0_snr18_tl-23_fileid_80.wav"></audio></td>
+                <td><audio controls=""><source src="audio/FSubNet/0/clnsp94_9wJqCdp5PKw_snr8_tl-18_fileid_43.wav"></audio></td>
+                <td><audio controls=""><source src="audio/FSubNet/0/clnsp176_chair_154380_0_snr19_tl-32_fileid_35.wav"></audio></td>
+                <td><audio controls=""><source src="audio/FSubNet/0/clnsp513_babble_188218_9_snr15_tl-21_fileid_287.wav"></audio></td>
+                </tr>
+                <tr> <td>NSNet2</td>
+               <td><audio controls=""><source src="audio/NSNet2/0/clnsp51_baby_416672_0_snr11_tl-22_fileid_167.wav"></audio></td>
+                <td><audio controls=""><source src="audio/NSNet2/0/clnsp67_air_conditioner_151977_0_snr18_tl-23_fileid_80.wav"></audio></td>
+                <td><audio controls=""><source src="audio/NSNet2/0/clnsp94_9wJqCdp5PKw_snr8_tl-18_fileid_43.wav"></audio></td>
+                <td><audio controls=""><source src="audio/NSNet2/0/clnsp176_chair_154380_0_snr19_tl-32_fileid_35.wav"></audio></td>
+                <td><audio controls=""><source src="audio/NSNet2/0/clnsp513_babble_188218_9_snr15_tl-21_fileid_287.wav"></audio></td>
+                </tr>
+                <tr> <td> NCSN++</td>
+                 <td><audio controls=""><source src="audio/NCSN++/0/clnsp51_baby_416672_0_snr11_tl-22_fileid_167.wav"></audio></td>
+                <td><audio controls=""><source src="audio/NCSN++/0/clnsp67_air_conditioner_151977_0_snr18_tl-23_fileid_80.wav"></audio></td>
+                <td><audio controls=""><source src="audio/NCSN++/0/clnsp94_9wJqCdp5PKw_snr8_tl-18_fileid_43.wav"></audio></td>
+                <td><audio controls=""><source src="audio/NCSN++/0/clnsp176_chair_154380_0_snr19_tl-32_fileid_35.wav"></audio></td>
+                <td><audio controls=""><source src="audio/NCSN++/0/clnsp513_babble_188218_9_snr15_tl-21_fileid_287.wav"></audio></td>
+                </tr>
+                <tr> <td> VEIDM </td>
+        	 <td><audio controls=""><source src="audio/VEIDM/0/clnsp51_baby_416672_0_snr11_tl-22_fileid_167.wav"></audio></td>
+                <td><audio controls=""><source src="audio/VEIDM/0/clnsp67_air_conditioner_151977_0_snr18_tl-23_fileid_80.wav"></audio></td>
+                <td><audio controls=""><source src="audio/VEIDM/0/clnsp94_9wJqCdp5PKw_snr8_tl-18_fileid_43.wav"></audio></td>
+                <td><audio controls=""><source src="audio/VEIDM/0/clnsp176_chair_154380_0_snr19_tl-32_fileid_35.wav"></audio></td>
+                <td><audio controls=""><source src="audio/VEIDM/0/clnsp513_babble_188218_9_snr15_tl-21_fileid_287.wav"></audio></td>
+                </tr>
+                <tr> <td> VPIDM </td>
+ 	 <td><audio controls=""><source src="audio/VPIDM/0/clnsp51_baby_416672_0_snr11_tl-22_fileid_167.wav"></audio></td>
+                <td><audio controls=""><source src="audio/VPIDM/0/clnsp67_air_conditioner_151977_0_snr18_tl-23_fileid_80.wav"></audio></td>
+                <td><audio controls=""><source src="audio/VPIDM/0/clnsp94_9wJqCdp5PKw_snr8_tl-18_fileid_43.wav"></audio></td>
+                <td><audio controls=""><source src="audio/VPIDM/0/clnsp176_chair_154380_0_snr19_tl-32_fileid_35.wav"></audio></td>
+                <td><audio controls=""><source src="audio/VPIDM/0/clnsp513_babble_188218_9_snr15_tl-21_fileid_287.wav"></audio></td>
+                </tr>        
+            </tbody>
+        </table>
+
+  <hr>
+      <h3>DNS Simulated dataset 5 dB</h3> 
+
+
+<table class="table ">
+            <thead>
+                <tr>
+                    <th>Models</th>
+                    <th>clnsp51</th>
+                    <th>clnsp67</th>
+                    <th>clnsp94</th>
+                    <th>clnsp176</th>
+                    <th>clnsp513</th>                    
+                </tr>
+            </thead>
+            <tbody>
+                <tr> <td> Clean </td>
+	 <td><audio controls=""><source src="audio/Clean/5/clnsp51_baby_416672_0_snr11_tl-22_fileid_167.wav"></audio></td>
+                <td><audio controls=""><source src="audio/Clean/5/clnsp67_air_conditioner_151977_0_snr18_tl-23_fileid_80.wav"></audio></td>
+                <td><audio controls=""><source src="audio/Clean/5/clnsp94_9wJqCdp5PKw_snr8_tl-18_fileid_43.wav"></audio></td>
+                <td><audio controls=""><source src="audio/Clean/5/clnsp176_chair_154380_0_snr19_tl-32_fileid_35.wav"></audio></td>
+	 <td><audio controls=""><source src="audio/Clean/5/clnsp624_XrrtrRz1A2Q_snr19_tl-22_fileid_54.wav"></audio></td>
+                </tr>
+                <tr> <td> Noisy </td>
+   	 <td><audio controls=""><source src="audio/Noisy/5/clnsp51_baby_416672_0_snr11_tl-22_fileid_167.wav"></audio></td>
+                <td><audio controls=""><source src="audio/Noisy/5/clnsp67_air_conditioner_151977_0_snr18_tl-23_fileid_80.wav"></audio></td>
+                <td><audio controls=""><source src="audio/Noisy/5/clnsp94_9wJqCdp5PKw_snr8_tl-18_fileid_43.wav"></audio></td>
+                <td><audio controls=""><source src="audio/Noisy/5/clnsp176_chair_154380_0_snr19_tl-32_fileid_35.wav"></audio></td>
+                <td><audio controls=""><source src="audio/Noisy/5/clnsp513_babble_188218_9_snr15_tl-21_fileid_287.wav"></audio></td>
+                </tr>
+                <tr> <td> FSubNet </td>
+              	 <td><audio controls=""><source src="audio/FSubNet/5/clnsp51_baby_416672_0_snr11_tl-22_fileid_167.wav"></audio></td>
+                <td><audio controls=""><source src="audio/FSubNet/5/clnsp67_air_conditioner_151977_0_snr18_tl-23_fileid_80.wav"></audio></td>
+                <td><audio controls=""><source src="audio/FSubNet/5/clnsp94_9wJqCdp5PKw_snr8_tl-18_fileid_43.wav"></audio></td>
+                <td><audio controls=""><source src="audio/FSubNet/5/clnsp176_chair_154380_0_snr19_tl-32_fileid_35.wav"></audio></td>
+                <td><audio controls=""><source src="audio/FSubNet/5/clnsp513_babble_188218_9_snr15_tl-21_fileid_287.wav"></audio></td>
+                </tr>
+                <tr> <td>NSNet2</td>
+               <td><audio controls=""><source src="audio/NSNet2/5/clnsp51_baby_416672_0_snr11_tl-22_fileid_167.wav"></audio></td>
+                <td><audio controls=""><source src="audio/NSNet2/5/clnsp67_air_conditioner_151977_0_snr18_tl-23_fileid_80.wav"></audio></td>
+                <td><audio controls=""><source src="audio/NSNet2/5/clnsp94_9wJqCdp5PKw_snr8_tl-18_fileid_43.wav"></audio></td>
+                <td><audio controls=""><source src="audio/NSNet2/5/clnsp176_chair_154380_0_snr19_tl-32_fileid_35.wav"></audio></td>
+                <td><audio controls=""><source src="audio/NSNet2/5/clnsp513_babble_188218_9_snr15_tl-21_fileid_287.wav"></audio></td>
+                </tr>
+                <tr> <td> NCSN++</td>
+                 <td><audio controls=""><source src="audio/NCSN++/5/clnsp51_baby_416672_0_snr11_tl-22_fileid_167.wav"></audio></td>
+                <td><audio controls=""><source src="audio/NCSN++/5/clnsp67_air_conditioner_151977_0_snr18_tl-23_fileid_80.wav"></audio></td>
+                <td><audio controls=""><source src="audio/NCSN++/5/clnsp94_9wJqCdp5PKw_snr8_tl-18_fileid_43.wav"></audio></td>
+                <td><audio controls=""><source src="audio/NCSN++/5/clnsp176_chair_154380_0_snr19_tl-32_fileid_35.wav"></audio></td>
+                <td><audio controls=""><source src="audio/NCSN++/5/clnsp513_babble_188218_9_snr15_tl-21_fileid_287.wav"></audio></td>
+                </tr>
+                <tr> <td> VEIDM </td>
+        	 <td><audio controls=""><source src="audio/VEIDM/5/clnsp51_baby_416672_0_snr11_tl-22_fileid_167.wav"></audio></td>
+                <td><audio controls=""><source src="audio/VEIDM/5/clnsp67_air_conditioner_151977_0_snr18_tl-23_fileid_80.wav"></audio></td>
+                <td><audio controls=""><source src="audio/VEIDM/5/clnsp94_9wJqCdp5PKw_snr8_tl-18_fileid_43.wav"></audio></td>
+                <td><audio controls=""><source src="audio/VEIDM/5/clnsp176_chair_154380_0_snr19_tl-32_fileid_35.wav"></audio></td>
+                <td><audio controls=""><source src="audio/VEIDM/5/clnsp513_babble_188218_9_snr15_tl-21_fileid_287.wav"></audio></td>
+                </tr>
+                <tr> <td> VPIDM </td>
+ 	 <td><audio controls=""><source src="audio/VPIDM/5/clnsp51_baby_416672_0_snr11_tl-22_fileid_167.wav"></audio></td>
+                <td><audio controls=""><source src="audio/VPIDM/5/clnsp67_air_conditioner_151977_0_snr18_tl-23_fileid_80.wav"></audio></td>
+                <td><audio controls=""><source src="audio/VPIDM/5/clnsp94_9wJqCdp5PKw_snr8_tl-18_fileid_43.wav"></audio></td>
+                <td><audio controls=""><source src="audio/VPIDM/5/clnsp176_chair_154380_0_snr19_tl-32_fileid_35.wav"></audio></td>
+                <td><audio controls=""><source src="audio/VPIDM/5/clnsp513_babble_188218_9_snr15_tl-21_fileid_287.wav"></audio></td>
+                </tr>        
+            </tbody>
+        </table>
+
+
+        <!-- <div style="font-size: medium;" class="color_fade"> Note: the audio samples of the original NyTT paper are not publicly available.</div> -->
+       
+    </br>    
+        <div class="row"> &nbsp; </div> <br/>
+
+    </div>
+
+
+  <script src="js/audio.js"></script>
+
+  <script>
+    // Run the script on page load.
+
+    // If using jQuery
+    // $(function(){
+    //   AudioJS.setup();
+    // });
+
+    // If using Prototype
+    // document.observe("dom:loaded", function() {
+    //   AudioJS.setup();
+    // });
+
+    // If not using a JS library
+    // (function(){
+    //   AudioJS.setup();
+    // });
+
+    // Since I'm calling this at the end of the HTML, I can probably get away
+    // with executing the setup without waiting for a load event. 
+    AudioJS.setup(false, {controlsAtStart: true});
+  </script>
+</body>
+</html>
