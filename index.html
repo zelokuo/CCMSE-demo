@@ -13,11 +13,10 @@
 
   <h1>Controllable Denoising Intensity for Speech Enhancement and Recognition <small class="color_fade">Audio Samples</small> </h1>
 <h4> Authors</h4>
-<div style="font-size: medium;"> Zilu Guo, Jun Du, Sabato Marco Siniscalch,  Jia Pan  and Qingfeng Liu </div>
+<div style="font-size: medium;"> Zilu Guo, Jun Du, Sabato Marco Siniscalch,  Jia Pan and Qingfeng Liu </div>
   <h4> Abstract </h4>
   <p>We propose a novel approach to speech enhancement, termed Controllable ConforMer for Speech Enhancement (CCMSE), which leverages a Conformer-based architecture integrated with a control factor embedding module. Our method is designed to optimize speech quality for both human auditory perception and automatic speech recognition (ASR). It is observed that while mild denoising typically preserves speech naturalness, stronger denoising can improve human auditory tasks but often at the cost of ASR accuracy due to increased distortion. To address this, we introduce a noise scheduling strategy that balances these trade-offs. By utilizing differential equations to interpolate between outputs at varying levels of denoising intensity, our method effectively combines the robustness of mild denoising with the clarity of stronger denoising, resulting in enhanced speech that is well-suited for both human and machine listeners. Experimental results on the CHiME-4 dataset validate the effectiveness of our approach. </p>
- <h3> Source Code </h3>
-	 <h4> Our codes are presented <font size="5"><a href="https://github.com/zelokuo/VPIDM">here</a></font> </h4>
+ 
  <h4> Audio Samples </h4>
   <hr>
       <h3>DNS Simulated dataset -5 dB</h3> 
@@ -27,63 +26,29 @@
             <thead>
                 <tr>
                     <th>Models</th>
-                    <th>clnsp51</th>
-                    <th>clnsp67</th>
-                    <th>clnsp94</th>
-                    <th>clnsp176</th>
-                    <th>clnsp513</th>                    
+                    <th>Female BUS noise</th>
+                    <th>Male BUS noise</th>
+		    <th>Female CAF noise</th>
+                    <th>Male CAF noise</th>
+		    <th>Female PED noise</th>
+                    <th>Male PED noise</th>
+		    <th>Female STR noise</th>
+                    <th>Male STR noise</th>                 
                 </tr>
             </thead>
             <tbody>
                 <tr> <td> Clean </td>
-	 <td><audio controls=""><source src="audio/Clean/-5/clnsp51_baby_416672_0_snr11_tl-22_fileid_167.wav"></audio></td>
-                <td><audio controls=""><source src="audio/Clean/-5/clnsp67_air_conditioner_151977_0_snr18_tl-23_fileid_80.wav"></audio></td>
-                <td><audio controls=""><source src="audio/Clean/-5/clnsp94_9wJqCdp5PKw_snr8_tl-18_fileid_43.wav"></audio></td>
-                <td><audio controls=""><source src="audio/Clean/-5/clnsp176_chair_154380_0_snr19_tl-32_fileid_35.wav"></audio></td>
-	 <td><audio controls=""><source src="audio/Clean/-5/clnsp624_XrrtrRz1A2Q_snr19_tl-22_fileid_54.wav"></audio></td>
+	 	<td><audio controls=""><source src="audio/clean/F01_423C0213_BUS.wav"></audio></td>
+		<td><audio controls=""><source src="audio/clean/M04_423C0212_BUS.wav"></audio></td>
+		<td><audio controls=""><source src="audio/clean/F04_053C010S_CAF.wav"></audio></td>
+		<td><audio controls=""><source src="audio/clean/M03_423C020B_CAF.wav"></audio></td>
+		<td><audio controls=""><source src="audio/clean/F01_050C0105_PED.wav.wav"></audio></td>
+		<td><audio controls=""><source src="audio/clean/M04_050C0113_PED.wav"></audio></td>
+		<td><audio controls=""><source src="audio/clean/F01_050C0103_STR.wav"></audio></td>
+		<td><audio controls=""><source src="audio/clean/M04_422C020R_STR.wav"></audio></td>
                 </tr>
-                <tr> <td> Noisy </td>
-   	 <td><audio controls=""><source src="audio/Noisy/-5/clnsp51_baby_416672_0_snr11_tl-22_fileid_167.wav"></audio></td>
-                <td><audio controls=""><source src="audio/Noisy/-5/clnsp67_air_conditioner_151977_0_snr18_tl-23_fileid_80.wav"></audio></td>
-                <td><audio controls=""><source src="audio/Noisy/-5/clnsp94_9wJqCdp5PKw_snr8_tl-18_fileid_43.wav"></audio></td>
-                <td><audio controls=""><source src="audio/Noisy/-5/clnsp176_chair_154380_0_snr19_tl-32_fileid_35.wav"></audio></td>
-                <td><audio controls=""><source src="audio/Noisy/-5/clnsp513_babble_188218_9_snr15_tl-21_fileid_287.wav"></audio></td>
-                </tr>
-                <tr> <td> FSubNet </td>
-              	 <td><audio controls=""><source src="audio/FSubNet/-5/clnsp51_baby_416672_0_snr11_tl-22_fileid_167.wav"></audio></td>
-                <td><audio controls=""><source src="audio/FSubNet/-5/clnsp67_air_conditioner_151977_0_snr18_tl-23_fileid_80.wav"></audio></td>
-                <td><audio controls=""><source src="audio/FSubNet/-5/clnsp94_9wJqCdp5PKw_snr8_tl-18_fileid_43.wav"></audio></td>
-                <td><audio controls=""><source src="audio/FSubNet/-5/clnsp176_chair_154380_0_snr19_tl-32_fileid_35.wav"></audio></td>
-                <td><audio controls=""><source src="audio/FSubNet/-5/clnsp513_babble_188218_9_snr15_tl-21_fileid_287.wav"></audio></td>
-                </tr>
-                <tr> <td>NSNet2</td>
-               <td><audio controls=""><source src="audio/NSNet2/-5/clnsp51_baby_416672_0_snr11_tl-22_fileid_167.wav"></audio></td>
-                <td><audio controls=""><source src="audio/NSNet2/-5/clnsp67_air_conditioner_151977_0_snr18_tl-23_fileid_80.wav"></audio></td>
-                <td><audio controls=""><source src="audio/NSNet2/-5/clnsp94_9wJqCdp5PKw_snr8_tl-18_fileid_43.wav"></audio></td>
-                <td><audio controls=""><source src="audio/NSNet2/-5/clnsp176_chair_154380_0_snr19_tl-32_fileid_35.wav"></audio></td>
-                <td><audio controls=""><source src="audio/NSNet2/-5/clnsp513_babble_188218_9_snr15_tl-21_fileid_287.wav"></audio></td>
-                </tr>
-                <tr> <td> NCSN++</td>
-                 <td><audio controls=""><source src="audio/NCSN++/-5/clnsp51_baby_416672_0_snr11_tl-22_fileid_167.wav"></audio></td>
-                <td><audio controls=""><source src="audio/NCSN++/-5/clnsp67_air_conditioner_151977_0_snr18_tl-23_fileid_80.wav"></audio></td>
-                <td><audio controls=""><source src="audio/NCSN++/-5/clnsp94_9wJqCdp5PKw_snr8_tl-18_fileid_43.wav"></audio></td>
-                <td><audio controls=""><source src="audio/NCSN++/-5/clnsp176_chair_154380_0_snr19_tl-32_fileid_35.wav"></audio></td>
-                <td><audio controls=""><source src="audio/NCSN++/-5/clnsp513_babble_188218_9_snr15_tl-21_fileid_287.wav"></audio></td>
-                </tr>
-                <tr> <td> VEIDM </td>
-        	 <td><audio controls=""><source src="audio/VEIDM/-5/clnsp51_baby_416672_0_snr11_tl-22_fileid_167.wav"></audio></td>
-                <td><audio controls=""><source src="audio/VEIDM/-5/clnsp67_air_conditioner_151977_0_snr18_tl-23_fileid_80.wav"></audio></td>
-                <td><audio controls=""><source src="audio/VEIDM/-5/clnsp94_9wJqCdp5PKw_snr8_tl-18_fileid_43.wav"></audio></td>
-                <td><audio controls=""><source src="audio/VEIDM/-5/clnsp176_chair_154380_0_snr19_tl-32_fileid_35.wav"></audio></td>
-                <td><audio controls=""><source src="audio/VEIDM/-5/clnsp513_babble_188218_9_snr15_tl-21_fileid_287.wav"></audio></td>
-                </tr>
-                <tr> <td> VPIDM </td>
- 	 <td><audio controls=""><source src="audio/VPIDM/-5/clnsp51_baby_416672_0_snr11_tl-22_fileid_167.wav"></audio></td>
-                <td><audio controls=""><source src="audio/VPIDM/-5/clnsp67_air_conditioner_151977_0_snr18_tl-23_fileid_80.wav"></audio></td>
-                <td><audio controls=""><source src="audio/VPIDM/-5/clnsp94_9wJqCdp5PKw_snr8_tl-18_fileid_43.wav"></audio></td>
-                <td><audio controls=""><source src="audio/VPIDM/-5/clnsp176_chair_154380_0_snr19_tl-32_fileid_35.wav"></audio></td>
-                <td><audio controls=""><source src="audio/VPIDM/-5/clnsp513_babble_188218_9_snr15_tl-21_fileid_287.wav"></audio></td>
-                </tr>        
+               
+       
             </tbody>
         </table>
 
