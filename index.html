@@ -18,79 +18,8 @@
   <p style="width: 60%;">We propose a novel approach to speech enhancement, termed Controllable ConforMer for Speech Enhancement (CCMSE), which leverages a Conformer-based architecture integrated with a control factor embedding module. Our method is designed to optimize speech quality for both human auditory perception and automatic speech recognition (ASR). It is observed that while mild denoising typically preserves speech naturalness, stronger denoising can improve human auditory tasks but often at the cost of ASR accuracy due to increased distortion. To address this, we introduce a noise scheduling strategy that balances these trade-offs. By utilizing differential equations to interpolate between outputs at varying levels of denoising intensity, our method effectively combines the robustness of mild denoising with the clarity of stronger denoising, resulting in enhanced speech that is well-suited for both human and machine listeners. Experimental results on the CHiME-4 dataset validate the effectiveness of our approach. </p>
  
  <h4> Audio Samples </h4>
-  <hr>
+	<hr>
       <h3>Male</h3> 
-
-
-<table class="table ">
-            <thead>
-                <tr>
-                    <th>Models</th>
-                    <th>Bus noise</th>
-		    <th>Cafeteria noise</th>
-		    <th>Pedestrian noise</th>
-		    <th>Street noise</th>               
-                </tr>
-            </thead>
-            <tbody>
-                <tr> <td> Clean </td>
-	 	<td><audio controls=""><source src="audio/clean/F01_423C0213_BUS.wav"></audio></td>
-		<td><audio controls=""><source src="audio/clean/F04_053C010S_CAF.wav"></audio></td>
-		<td><audio controls=""><source src="audio/clean/F01_050C0105_PED.wav"></audio></td>
-		<td><audio controls=""><source src="audio/clean/F01_050C0103_STR.wav"></audio></td>
-                </tr>
-		<tr> <td> Noisy </td>
-	 	<td><audio controls=""><source src="audio/noisy/F01_423C0213_BUS.wav"></audio></td>
-		<td><audio controls=""><source src="audio/noisy/F04_053C010S_CAF.wav"></audio></td>
-		<td><audio controls=""><source src="audio/noisy/F01_050C0105_PED.wav"></audio></td>
-		<td><audio controls=""><source src="audio/noisy/F01_050C0103_STR.wav"></audio></td>
-                </tr>
-                <tr> <td> IDM-ASR </td>
-	 	<td><audio controls=""><source src="audio/IDM-ASR/F01_423C0213_BUS.wav"></audio></td>
-		<td><audio controls=""><source src="audio/IDM-ASR/F04_053C010S_CAF.wav"></audio></td>
-		<td><audio controls=""><source src="audio/IDM-ASR/F01_050C0105_PED.wav"></audio></td>
-		<td><audio controls=""><source src="audio/IDM-ASR/F01_050C0103_STR.wav"></audio></td>
-                </tr>
-         	<tr> <td> IDM-HAR </td>
-	 	<td><audio controls=""><source src="audio/IDM-HAR/F01_423C0213_BUS.wav"></audio></td>
-		<td><audio controls=""><source src="audio/IDM-HAR/F04_053C010S_CAF.wav"></audio></td>
-		<td><audio controls=""><source src="audio/IDM-HAR/F01_050C0105_PED.wav"></audio></td>
-		<td><audio controls=""><source src="audio/IDM-HAR/F01_050C0103_STR.wav"></audio></td>
-                </tr>
-		<tr> <td> REMIX </td>
-	 	<td><audio controls=""><source src="audio/REMIX/F01_423C0213_BUS.wav"></audio></td>
-		<td><audio controls=""><source src="audio/REMIX/F04_053C010S_CAF.wav"></audio></td>
-		<td><audio controls=""><source src="audio/REMIX/F01_050C0105_PED.wav"></audio></td>
-		<td><audio controls=""><source src="audio/REMIX/F01_050C0103_STR.wav"></audio></td>
-                </tr>
-		<tr> <td> CMSE </td>
-	 	<td><audio controls=""><source src="audio/CMSE/F01_423C0213_BUS.wav"></audio></td>
-		<td><audio controls=""><source src="audio/CMSE/F04_053C010S_CAF.wav"></audio></td>
-		<td><audio controls=""><source src="audio/CMSE/F01_050C0105_PED.wav"></audio></td>
-		<td><audio controls=""><source src="audio/CMSE/F01_050C0103_STR.wav"></audio></td>
-                </tr>
-		 <tr> <td> CCMSE-ASR </td>
-	 	<td><audio controls=""><source src="audio/asr/F01_423C0213_BUS.wav"></audio></td>
-		<td><audio controls=""><source src="audio/asr/F04_053C010S_CAF.wav"></audio></td>
-		<td><audio controls=""><source src="audio/asr/F01_050C0105_PED.wav"></audio></td>
-		<td><audio controls=""><source src="audio/asr/F01_050C0103_STR.wav"></audio></td>
-                </tr>
-		<tr> <td> CCMSE-HAR </td>
-	 	<td><audio controls=""><source src="audio/har/F01_423C0213_BUS.wav"></audio></td>
-		<td><audio controls=""><source src="audio/har/F04_053C010S_CAF.wav"></audio></td>
-		<td><audio controls=""><source src="audio/har/F01_050C0105_PED.wav"></audio></td>
-		<td><audio controls=""><source src="audio/har/F01_050C0103_STR.wav"></audio></td>
-                </tr>
-		<tr> <td> CCMSE </td>
-	 	<td><audio controls=""><source src="audio/final/F01_423C0213_BUS.wav"></audio></td>
-		<td><audio controls=""><source src="audio/final/F04_053C010S_CAF.wav"></audio></td>
-		<td><audio controls=""><source src="audio/final/F01_050C0105_PED.wav"></audio></td>
-		<td><audio controls=""><source src="audio/final/F01_050C0103_STR.wav"></audio></td>
-                </tr>
-            </tbody>
-        </table>
-<hr>
-      <h3>Female</h3> 
 	
 <table class="table ">
             <thead>
@@ -160,6 +89,78 @@
        
             </tbody>
         </table>
+  <hr>
+      <h3>Female</h3> 
+
+
+<table class="table ">
+            <thead>
+                <tr>
+                    <th>Models</th>
+                    <th>Bus noise</th>
+		    <th>Cafeteria noise</th>
+		    <th>Pedestrian noise</th>
+		    <th>Street noise</th>               
+                </tr>
+            </thead>
+            <tbody>
+                <tr> <td> Clean </td>
+	 	<td><audio controls=""><source src="audio/clean/F01_423C0213_BUS.wav"></audio></td>
+		<td><audio controls=""><source src="audio/clean/F04_053C010S_CAF.wav"></audio></td>
+		<td><audio controls=""><source src="audio/clean/F01_050C0105_PED.wav"></audio></td>
+		<td><audio controls=""><source src="audio/clean/F01_050C0103_STR.wav"></audio></td>
+                </tr>
+		<tr> <td> Noisy </td>
+	 	<td><audio controls=""><source src="audio/noisy/F01_423C0213_BUS.wav"></audio></td>
+		<td><audio controls=""><source src="audio/noisy/F04_053C010S_CAF.wav"></audio></td>
+		<td><audio controls=""><source src="audio/noisy/F01_050C0105_PED.wav"></audio></td>
+		<td><audio controls=""><source src="audio/noisy/F01_050C0103_STR.wav"></audio></td>
+                </tr>
+                <tr> <td> IDM-ASR </td>
+	 	<td><audio controls=""><source src="audio/IDM-ASR/F01_423C0213_BUS.wav"></audio></td>
+		<td><audio controls=""><source src="audio/IDM-ASR/F04_053C010S_CAF.wav"></audio></td>
+		<td><audio controls=""><source src="audio/IDM-ASR/F01_050C0105_PED.wav"></audio></td>
+		<td><audio controls=""><source src="audio/IDM-ASR/F01_050C0103_STR.wav"></audio></td>
+                </tr>
+         	<tr> <td> IDM-HAR </td>
+	 	<td><audio controls=""><source src="audio/IDM-HAR/F01_423C0213_BUS.wav"></audio></td>
+		<td><audio controls=""><source src="audio/IDM-HAR/F04_053C010S_CAF.wav"></audio></td>
+		<td><audio controls=""><source src="audio/IDM-HAR/F01_050C0105_PED.wav"></audio></td>
+		<td><audio controls=""><source src="audio/IDM-HAR/F01_050C0103_STR.wav"></audio></td>
+                </tr>
+		<tr> <td> REMIX </td>
+	 	<td><audio controls=""><source src="audio/REMIX/F01_423C0213_BUS.wav"></audio></td>
+		<td><audio controls=""><source src="audio/REMIX/F04_053C010S_CAF.wav"></audio></td>
+		<td><audio controls=""><source src="audio/REMIX/F01_050C0105_PED.wav"></audio></td>
+		<td><audio controls=""><source src="audio/REMIX/F01_050C0103_STR.wav"></audio></td>
+                </tr>
+		<tr> <td> CMSE </td>
+	 	<td><audio controls=""><source src="audio/CMSE/F01_423C0213_BUS.wav"></audio></td>
+		<td><audio controls=""><source src="audio/CMSE/F04_053C010S_CAF.wav"></audio></td>
+		<td><audio controls=""><source src="audio/CMSE/F01_050C0105_PED.wav"></audio></td>
+		<td><audio controls=""><source src="audio/CMSE/F01_050C0103_STR.wav"></audio></td>
+                </tr>
+		 <tr> <td> CCMSE-ASR </td>
+	 	<td><audio controls=""><source src="audio/asr/F01_423C0213_BUS.wav"></audio></td>
+		<td><audio controls=""><source src="audio/asr/F04_053C010S_CAF.wav"></audio></td>
+		<td><audio controls=""><source src="audio/asr/F01_050C0105_PED.wav"></audio></td>
+		<td><audio controls=""><source src="audio/asr/F01_050C0103_STR.wav"></audio></td>
+                </tr>
+		<tr> <td> CCMSE-HAR </td>
+	 	<td><audio controls=""><source src="audio/har/F01_423C0213_BUS.wav"></audio></td>
+		<td><audio controls=""><source src="audio/har/F04_053C010S_CAF.wav"></audio></td>
+		<td><audio controls=""><source src="audio/har/F01_050C0105_PED.wav"></audio></td>
+		<td><audio controls=""><source src="audio/har/F01_050C0103_STR.wav"></audio></td>
+                </tr>
+		<tr> <td> CCMSE </td>
+	 	<td><audio controls=""><source src="audio/final/F01_423C0213_BUS.wav"></audio></td>
+		<td><audio controls=""><source src="audio/final/F04_053C010S_CAF.wav"></audio></td>
+		<td><audio controls=""><source src="audio/final/F01_050C0105_PED.wav"></audio></td>
+		<td><audio controls=""><source src="audio/final/F01_050C0103_STR.wav"></audio></td>
+                </tr>
+            </tbody>
+        </table>
+
 	
 
 
